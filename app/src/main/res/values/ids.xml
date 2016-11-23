@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mian_viewpager4" type="id" />
+    <item name="fragment_tabhost" type="id" />
+    <item name="framelayout_mian" type="id" />
+    <item name="tabcontent" type="id" />
+    <item name="image_tab" type="id" />
+    <item name="textview_tab" type="id" />
+</resources>
