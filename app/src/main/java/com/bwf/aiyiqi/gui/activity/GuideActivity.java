@@ -1,4 +1,4 @@
-package com.bwf.aiyiqi.gui;
+package com.bwf.aiyiqi.gui.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,8 +10,8 @@ import android.widget.DatePicker;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.bwf.aiyiqi.MainActivity;
 import com.bwf.aiyiqi.R;
+import com.bwf.aiyiqi.kitutils.Constant;
 import com.bwflmw.framwork.BaseActivity;
 
 import butterknife.BindView;
@@ -120,10 +120,19 @@ public class GuideActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.text_cancel:
+                int count = sp.getInt(Constant.CANCEL_COUNT, 0);
+                sp.edit().putInt(Constant.CANCEL_COUNT,count+1).commit();
                 finish();
                 startActivity(new Intent(GuideActivity.this, MainActivity.class));
                 break;
             case R.id.btn_goto_main:
+                sp.edit().putBoolean(Constant.FIRSTUSE,false)
+                        .putString(Constant.USER_SEX,sex)
+                        .putString(Constant.USER_BIRTHDAY,year+"-"+month+"-"+day)
+                        .putString(Constant.FITMENT_PALN,fitmentPlan)
+                        .commit();
+                finish();
+                startActivity(new Intent(GuideActivity.this, MainActivity.class));
                 break;
         }
     }

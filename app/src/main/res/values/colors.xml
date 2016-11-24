@@ -7,4 +7,7 @@
     <color name="color_devide">#3c3f41</color>
     <color name="white">#ffffff</color>
     <color name="text">#5d5b5a</color>
+    <color name="software_textColor_selected">#32CD32</color>
+    <color name="software_textColor_unselected">#292929</color>
+
 </resources>
