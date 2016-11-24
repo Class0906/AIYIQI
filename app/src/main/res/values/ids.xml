@@ -31,4 +31,13 @@
     <item name="viewpager_home_title" type="id" />
     <item name="recyclerview" type="id" />
     <item name="image_viewpager_main_page" type="id" />
+    <item name="textview_nomore_data" type="id" />
+    <item name="text_loading" type="id" />
+    <item name="text_reload" type="id" />
+    <item name="image_main_recycler_item" type="id" />
+    <item name="text_main_recycler_item_title" type="id" />
+    <item name="text_publish_time" type="id" />
+    <item name="text_comment_count" type="id" />
+    <item name="image_comment" type="id" />
+    <item name="text_looked_count" type="id" />
 </resources>

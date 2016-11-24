@@ -10,5 +10,6 @@
     <color name="software_textColor_selected">#32CD32</color>
     <color name="software_textColor_unselected">#292929</color>
     <color name="colorTransport">#00000000</color>
+    <color name="color_black">#000000</color>
 
 </resources>
