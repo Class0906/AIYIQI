@@ -68,7 +68,7 @@ public class FragmentMain extends BaseFragment implements MainView {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerview.setLayoutManager(layoutManager);
-        recyclerview.setAdapter(new MainRecyclerViewAdapter());
+        recyclerview.setAdapter(new MainRecyclerViewAdapter(getActivity()));
     }
 
     @Override

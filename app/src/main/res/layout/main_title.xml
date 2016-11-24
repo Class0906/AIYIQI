@@ -21,6 +21,8 @@
         android:padding="10dp"
         android:layout_alignParentRight="true"
         android:layout_width="30dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
         android:layout_height="30dp"
         android:src="@mipmap/home_title_location_flag"/>
     <TextView
@@ -43,7 +45,7 @@
         android:layout_toLeftOf="@id/text_city"
         android:layout_toRightOf="@id/image_scan">
         <ImageView
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:src="@mipmap/home_search"/>
@@ -55,5 +57,11 @@
             android:text="@string/text_head_title_serch"
             android:layout_width="match_parent"
             android:layout_height="35dp"/>
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"/>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/home_title_location_flag"/>
     </LinearLayout>
 </RelativeLayout>

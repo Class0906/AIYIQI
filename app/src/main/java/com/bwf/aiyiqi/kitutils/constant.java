@@ -4,7 +4,7 @@ package com.bwf.aiyiqi.kitutils;
  * Created by lmw on 2016/11/24.
  */
 
-public interface Constant {
+ public interface Constant {
     /**sharedpreferences文件名**/
     String SP_USER_INFO = "userInfo";
     String FIRSTUSE = "firstUse";
