@@ -5,4 +5,5 @@ package com.bwf.aiyiqi.kitutils;
  */
 
 public class AppVersionID {
+
 }

@@ -6,4 +6,17 @@
     <item name="tabcontent" type="id" />
     <item name="image_tab" type="id" />
     <item name="textview_tab" type="id" />
+    <item name="title_QRcode" type="id" />
+    <item name="ed_mian_titile" type="id" />
+    <item name="saomiao_main_title" type="id" />
+    <item name="ll_search" type="id" />
+    <item name="Image_main_title_search" type="id" />
+    <item name="editetext_main_title_search" type="id" />
+    <item name="appBarLayout" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="viewpager_framlayout" type="id" />
+    <item name="viewPager_main_fragment" type="id" />
+    <item name="linearLayout_pager_indicator" type="id" />
+    <item name="viewPager_main_list_slide" type="id" />
+    <item name="main_fragment_recycleview" type="id" />
 </resources>

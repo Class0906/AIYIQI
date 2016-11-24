@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AIYIQI</string>
+    <string name="main_search_editext">搜索用户/帖子</string>
+    <string name="main_title_city">城市</string>
 </resources>

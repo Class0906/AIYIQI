@@ -57,6 +57,8 @@ public class MainActivity extends FragmentActivity {
             TabSpec tabSpec = mTabHost.newTabSpec(mTextviewArray[i]).setIndicator(getTabItemView(i));
             //将Tab按钮添加进Tab选项卡中
             mTabHost.addTab(tabSpec, fragmentArray[i], null);
+            //消除分割线
+            mTabHost.getTabWidget().setDividerDrawable(R.color.white);
         }
     }
 
