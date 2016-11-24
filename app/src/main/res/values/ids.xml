@@ -23,4 +23,11 @@
     <item name="linearLayout_pager_indicator" type="id" />
     <item name="viewPager_main_list_slide" type="id" />
     <item name="main_fragment_recycleview" type="id" />
+    <item name="refreshlayout" type="id" />
+    <item name="image_scan" type="id" />
+    <item name="text_serch" type="id" />
+    <item name="text_city" type="id" />
+    <item name="layout_home_title_search" type="id" />
+    <item name="viewpager_home_title" type="id" />
+    <item name="recyclerview" type="id" />
 </resources>

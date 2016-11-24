@@ -3,10 +3,10 @@ package com.bwf.aiyiqi.entity;
 import java.util.List;
 
 /**
- * Created by Zoulin on 2016/11/23.
+ * Created by lmw on 2016/11/24.
  */
 
-public class ResponseBatching {
+public class ResponseHomeAD {
 
     /**
      * error : 0
@@ -16,15 +16,6 @@ public class ResponseBatching {
 
     private int error;
     private String message;
-    /**
-     * title : 中国互联网家装金钻工程首发，全国49城联动
-     * imagesrc : http://appmanager.17house.com/upload/20161031/58172fa38505f_t.jpg
-     * imagesrc2 : http://appmanager.17house.com/upload/20161031/58172fa3ae658_t.jpg
-     * tid :
-     * type : 4
-     * banner_url : http://tuan.17house.com/bj/2673.html
-     */
-
     private List<DataBean> data;
 
     public int getError() {
@@ -52,6 +43,15 @@ public class ResponseBatching {
     }
 
     public static class DataBean {
+        /**
+         * title : 中国互联网家装金钻工程首发，全国49城联动
+         * imagesrc : http://appmanager.17house.com/upload/20161031/58172fa38505f_t.jpg
+         * imagesrc2 : http://appmanager.17house.com/upload/20161031/58172fa3ae658_t.jpg
+         * tid :
+         * type : 4
+         * banner_url : http://tuan.17house.com/bj/2673.html
+         */
+
         private String title;
         private String imagesrc;
         private String imagesrc2;

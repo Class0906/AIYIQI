@@ -19,7 +19,16 @@ public abstract class BaseFragment extends Fragment {
         return inflater.inflate(getContentViewResId(), null);
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        initView();
+        initData();
+    }
+
     protected abstract int getContentViewResId();
+    protected abstract void initView();
+    protected abstract void initData();
 
     public void setMargins(View view, int left, int top, int right, int bottom) {
         ViewGroup.LayoutParams params = view.getLayoutParams();

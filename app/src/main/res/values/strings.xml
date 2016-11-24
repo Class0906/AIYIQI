@@ -6,4 +6,5 @@
     <string name="text_choose_birthday">选择生日：</string>
     <string name="main_search_editext">搜索用户/帖子</string>
     <string name="main_title_city">城市</string>
+    <string name="text_head_title_serch">搜索用户/帖子</string>
 </resources>

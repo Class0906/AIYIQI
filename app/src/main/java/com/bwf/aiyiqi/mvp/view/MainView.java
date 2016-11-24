@@ -1,12 +1,13 @@
 package com.bwf.aiyiqi.mvp.view;
 
-import com.bwf.aiyiqi.entity.ResponseBatching;
+import com.bwf.aiyiqi.entity.ResponseHomeAD;
 
 /**
  * Created by Zoulin on 2016/11/23.
  */
 
 public interface MainView {
-    void showBatchingData(ResponseBatching batching);
-    void showLoadBatchingError();
+    void showMainViewPager(ResponseHomeAD data);
+
+    void showFailed();
 }

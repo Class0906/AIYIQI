@@ -18,5 +18,6 @@
         <activity android:name=".gui.activity.GuideActivity"/>
         <activity android:name=".gui.activity.MainActivity"/>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
