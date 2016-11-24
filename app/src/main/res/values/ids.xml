@@ -19,4 +19,5 @@
     <item name="linearLayout_pager_indicator" type="id" />
     <item name="viewPager_main_list_slide" type="id" />
     <item name="main_fragment_recycleview" type="id" />
+    <item name="iamgeView_subview_main_slide_page" type="id" />
 </resources>
