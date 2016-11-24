@@ -30,4 +30,5 @@
     <item name="layout_home_title_search" type="id" />
     <item name="viewpager_home_title" type="id" />
     <item name="recyclerview" type="id" />
+    <item name="image_viewpager_main_page" type="id" />
 </resources>

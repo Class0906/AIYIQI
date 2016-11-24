@@ -5,5 +5,6 @@ package com.bwf.aiyiqi.mvp.presenter;
  */
 
 public interface MainPresenter {
-    void loadMainData();
+    void firstLoadData();
+    void loadMoreData();
 }

@@ -2,7 +2,7 @@ package com.bwf.aiyiqi.gui.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,9 +14,13 @@ import android.widget.TextView;
 
 import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.entity.ResponseHomeAD;
+import com.bwf.aiyiqi.entity.ResponseHomeBBS;
+import com.bwf.aiyiqi.gui.adapter.MainRecyclerViewAdapter;
+import com.bwf.aiyiqi.gui.adapter.UnlimitPagerAdapter;
 import com.bwf.aiyiqi.mvp.presenter.MainPresenter;
 import com.bwf.aiyiqi.mvp.presenter.impl.MainPresenterImpl;
 import com.bwf.aiyiqi.mvp.view.MainView;
+import com.bwf.aiyiqi.view.AutoScorllViewPager;
 import com.bwflmw.framwork.BaseFragment;
 import com.cjj.MaterialRefreshLayout;
 
@@ -32,7 +36,7 @@ import butterknife.OnClick;
 public class FragmentMain extends BaseFragment implements MainView {
 
     @BindView(R.id.viewpager_home_title)
-    ViewPager viewpagerHomeTitle;
+    AutoScorllViewPager viewpagerHomeTitle;
     @BindView(R.id.container_viewpager_indicator)
     LinearLayout containerViewpagerIndicator;
     @BindView(R.id.image_scan)
@@ -56,12 +60,15 @@ public class FragmentMain extends BaseFragment implements MainView {
     @Override
     protected void initData() {
         MainPresenter presenter = new MainPresenterImpl(this);
-        presenter.loadMainData();
+        presenter.firstLoadData();
     }
 
     @Override
     protected void initView() {
-
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerview.setLayoutManager(layoutManager);
+        recyclerview.setAdapter(new MainRecyclerViewAdapter());
     }
 
     @Override
@@ -88,11 +95,17 @@ public class FragmentMain extends BaseFragment implements MainView {
 
     @Override
     public void showMainViewPager(ResponseHomeAD data) {
-        Log.d("FragmentMain", "data.getData().size():" + data.getData().size());
+        Log.d("FragmentMain", "success");
+        viewpagerHomeTitle.setAdapter(new UnlimitPagerAdapter(getActivity(),data.getData()));
+    }
+
+    @Override
+    public void showMainRecyclerView(ResponseHomeBBS data) {
+
     }
 
     @Override
     public void showFailed() {
-
+        Log.d("FragmentMain", "failed");
     }
 }
