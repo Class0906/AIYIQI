@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#159867</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="little_gray">#e9e9e9</color>
+    <color name="color_devide">#3c3f41</color>
+    <color name="white">#ffffff</color>
+    <color name="text">#5d5b5a</color>
     <color name="software_textColor_selected">#32CD32</color>
     <color name="software_textColor_unselected">#292929</color>
-    <color name="white">#ffffff</color>
+    <color name="account_line">#CCCCCC</color>
 
 </resources>

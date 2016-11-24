@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="text_cancel" type="id" />
+    <item name="datepicker" type="id" />
+    <item name="radio_state" type="id" />
+    <item name="radio_sex" type="id" />
     <item name="mian_viewpager4" type="id" />
     <item name="fragment_tabhost" type="id" />
     <item name="framelayout_mian" type="id" />
@@ -20,4 +24,15 @@
     <item name="viewPager_main_list_slide" type="id" />
     <item name="main_fragment_recycleview" type="id" />
     <item name="iamgeView_subview_main_slide_page" type="id" />
+    <item name="Z_ed_seek_text" type="id" />
+    <item name="seek_titile_text" type="id" />
+    <item name="main_titile_fitment_img" type="id" />
+    <item name="activity_fragment_fitment_linner1" type="id" />
+    <item name="activity_fragment_fitment_linner2" type="id" />
+    <item name="fitment_look_site" type="id" />
+    <item name="Decorate_live_linner" type="id" />
+    <item name="scrollView_fitment" type="id" />
+    <item name="fitment_yiqi_group" type="id" />
+    <item name="fitment_site_playing" type="id" />
+    <item name="newhouse_webview" type="id" />
 </resources>

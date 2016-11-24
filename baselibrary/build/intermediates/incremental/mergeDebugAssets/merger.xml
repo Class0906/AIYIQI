@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="F:\AndRoidStudio\project\AIYIQI\baselibrary\src\main\assets"/><source path="F:\AndRoidStudio\project\AIYIQI\baselibrary\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\AndRoidStudio\project\AIYIQI\baselibrary\src\debug\assets"/></dataSet></merger>

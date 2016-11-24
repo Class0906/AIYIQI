@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">AIYIQI</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_guide">让我们花10秒钟了解你\n以便发现您最需要的装修内容</string>
+    <string name="text_sex">选择性别：</string>
+    <string name="text_choose_birthday">选择生日：</string>
     <string name="main_search_editext">搜索用户/帖子</string>
     <string name="main_title_city">城市</string>
+    <string name="seek_quxiao">取消</string>
+    <string name="activity_seek_text">搜索更多内容</string>
+    <string name="seek_user_name">用户</string>
+    <string name="seek_search_posts">帖子</string>
+    <string name="main_title_fitment_text">装修公司</string>
+    <string name="fitment_text_baojia1">677元/m.</string>
+    <string name="fitment_text_laofang">老房整装</string>
+    <string name="fitment_text_baojia2">677+117元/m.</string>
+    <string name="fitment_text_xinfang">新房整装</string>
+    <string name="look_sit">看现场</string>
+    <string name="yiqi_group">一起团队</string>
+    <string name="site_playing">工地直播</string>
+    <string name="zhuangxiuzhibo">装修直播</string>
 </resources>
