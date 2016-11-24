@@ -1,4 +1,4 @@
-package com.bwflmw.baselibrary;
+package com.bwflmw.framwork;
 
 import org.junit.Test;
 

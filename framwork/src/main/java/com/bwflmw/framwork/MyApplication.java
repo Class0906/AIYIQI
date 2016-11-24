@@ -1,4 +1,4 @@
-package com.bwflmw.baselibrary;
+package com.bwflmw.framwork;
 
 import android.app.Application;
 import android.content.Context;

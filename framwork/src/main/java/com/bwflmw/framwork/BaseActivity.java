@@ -1,4 +1,4 @@
-package com.bwflmw.baselibrary;
+package com.bwflmw.framwork;
 
 import android.content.pm.ActivityInfo;
 import android.graphics.Rect;
@@ -19,7 +19,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //设置为竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setTransparentTitlebar();
         setContentView(getContentViewResId());
         initView();
         initData();

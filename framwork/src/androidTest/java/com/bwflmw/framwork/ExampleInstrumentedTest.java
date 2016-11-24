@@ -1,4 +1,4 @@
-package com.bwflmw.baselibrary;
+package com.bwflmw.framwork;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

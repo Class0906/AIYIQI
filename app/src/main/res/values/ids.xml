@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="text_cancel" type="id" />
+    <item name="datepicker" type="id" />
+    <item name="radio_state" type="id" />
+    <item name="radio_sex" type="id" />
+</resources>

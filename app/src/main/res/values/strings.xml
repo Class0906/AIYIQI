@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AIYIQI</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_guide">让我们花10秒钟了解你\n以便发现您最需要的装修内容</string>
+    <string name="text_sex">选择性别：</string>
+    <string name="text_choose_birthday">选择生日：</string>
 </resources>
