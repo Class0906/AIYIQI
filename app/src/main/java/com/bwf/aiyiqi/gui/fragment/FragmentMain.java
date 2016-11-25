@@ -16,7 +16,6 @@ import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.entity.ResponseHomeAD;
 import com.bwf.aiyiqi.entity.ResponseHomeBBS;
 import com.bwf.aiyiqi.gui.adapter.MainRecyclerViewAdapter;
-import com.bwf.aiyiqi.gui.adapter.UnlimitPagerAdapter;
 import com.bwf.aiyiqi.mvp.presenter.MainPresenter;
 import com.bwf.aiyiqi.mvp.presenter.impl.MainPresenterImpl;
 import com.bwf.aiyiqi.mvp.view.MainView;
@@ -96,7 +95,7 @@ public class FragmentMain extends BaseFragment implements MainView {
     @Override
     public void showMainViewPager(ResponseHomeAD data) {
         Log.d("FragmentMain", "success");
-        viewpagerHomeTitle.setAdapter(new UnlimitPagerAdapter(getActivity(),data.getData()));
+        viewpagerHomeTitle.setAdapter(new com.bwf.aiyiqi.gui.adapter.UnlimitPagerAdapter(getActivity(),data.getData()));
     }
 
     @Override

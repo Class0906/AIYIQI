@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+        >
+
+    <com.bwf.aiyiqi.view.AutoScorllViewPager
+        android:id="@id/viewPager_main_list_slide"
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip" />
+
+    <LinearLayout
+        android:id="@id/linearLayout_pager_indicator"
+        android:layout_width="100dp"
+        android:layout_height="10.0dip"
+        android:layout_marginBottom="15.0dip"
+        android:layout_below="@id/viewPager_main_list_slide"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        />
+
+</FrameLayout>

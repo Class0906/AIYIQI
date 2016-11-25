@@ -1,4 +1,4 @@
-package com.bwf.aiyiqi.gui.Adapter;
+package com.bwf.aiyiqi.gui.adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
