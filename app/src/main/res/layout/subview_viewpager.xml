@@ -4,7 +4,7 @@
               android:layout_height="wrap_content"
         >
 
-    <com.bwf.aiyiqi.view.AutoScrollViewPager
+    <com.bwf.aiyiqi.view.AutoScorllViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@id/viewPager_main_list_slide"
         android:layout_width="fill_parent"

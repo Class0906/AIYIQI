@@ -17,7 +17,6 @@
             android:orientation="vertical">
 
             <include
-                android:id="@id/viewpager_framlayout"
                 layout="@layout/subview_viewpager" />
 
             <LinearLayout

@@ -9,7 +9,7 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 
 import com.bwf.aiyiqi.R;
-import com.bwf.aiyiqi.view.AutoScrollViewPager;
+import com.bwf.aiyiqi.view.AutoScorllViewPager;
 import com.bwflmw.framwork.BaseActivity;
 
 import butterknife.BindView;
@@ -24,7 +24,7 @@ public class ActivityFitment extends BaseActivity {
     @BindView(R.id.main_titile_fitment_img)
     ImageView mainTitileFitmentImg;
     @BindView(R.id.viewPager_main_list_slide)
-    AutoScrollViewPager viewPagerMainListSlide;
+    AutoScorllViewPager viewPagerMainListSlide;
     @BindView(R.id.linearLayout_pager_indicator)
     LinearLayout linearLayoutPagerIndicator;
     @BindView(R.id.activity_fragment_fitment_linner1)

@@ -1,4 +1,4 @@
-package com.bwf.aiyiqi.gui.adapter;
+package com.bwf.aiyiqi.gui.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
