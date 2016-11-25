@@ -29,7 +29,7 @@
 
                     app:collapseIcon="@mipmap/ic_launcher">
 
-                    <include layout="@layout/main_title"/>
+                    <!--<include layout="@layout/main_title"/>-->
                 </android.support.v7.widget.Toolbar>
 
                 <include layout="@layout/subview_viewpager"
