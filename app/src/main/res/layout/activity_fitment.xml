@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--装修公司界面-->
+    <include layout="@layout/main_title_fitment"></include>
+
+    <ScrollView
+        android:id="@id/scrollView_fitment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/subview_home_viewpager" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:showDividers="middle"
+                android:divider="@drawable/main_fengexian"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@id/activity_fragment_fitment_linner1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/new_house_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fitment_text_baojia1"
+                        android:textColor="@color/software_textColor_selected" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fitment_text_xinfang" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/activity_fragment_fitment_linner2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/old_house_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fitment_text_baojia2"
+                        android:textColor="@color/software_textColor_selected" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fitment_text_laofang" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:background="#C2C2C2"
+                android:layout_marginBottom="10dp"
+                android:layout_height="10dp" />
+
+            <include layout="@layout/fitment_look_sit"></include>
+            <ImageView
+                android:layout_width="match_parent"
+                android:background="#C2C2C2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/zhuangxiuzhibo"
+                    android:textStyle="bold" />
+
+                <ListView
+                    android:id="@id/Decorate_live_linner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

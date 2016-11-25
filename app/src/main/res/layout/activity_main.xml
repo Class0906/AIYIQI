@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.bwf.aiyiqi.gui.activity.MainActivity">
-
+    <!--主界面-->
     <FrameLayout
         android:id="@id/framelayout_mian"
         android:layout_width="fill_parent"
@@ -14,17 +14,19 @@
         android:layout_weight="1">
     </FrameLayout>
 
+    <View
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_devide"/>
     <android.support.v4.app.FragmentTabHost
         android:id="@id/fragment_tabhost"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="45dp">
         
         <FrameLayout
             android:id="@id/tabcontent"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0">
-
-        </FrameLayout>
+            android:layout_height="0dp"/>
     </android.support.v4.app.FragmentTabHost>
 </LinearLayout>
