@@ -1,6 +1,7 @@
 package com.bwf.aiyiqi.gui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.entity.ResponseHomeBBS;
+import com.bwf.aiyiqi.gui.activity.ActivityFitment;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
@@ -28,11 +30,13 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     private int TYPE_FOOTER = 1;
     private int TYPE_ARTICLE = 2;
     private int TYPE_BBS = 3;
+    private Context contenx;
 
 
     public MainRecyclerViewAdapter(Context context) {
         data = new ArrayList<>();
         inflater = LayoutInflater.from(context);
+        this.contenx = context;
     }
 
     public void addData() {
@@ -56,6 +60,15 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == TYPE_HEADER) {
             View headerView = inflater.inflate(R.layout.item_header_main_recycler, parent, false);
+            //点击跳转到装修公司页面
+            LinearLayout ll_activiy = (LinearLayout) headerView.findViewById(R.id.layout_main_header_company);
+            ll_activiy.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    contenx.startActivity(new Intent(contenx, ActivityFitment.class));
+                }
+            });
+            //todo 跳转到其他到页面
             return new HeaderViewHolder(headerView);
         }
         if (viewType == TYPE_FOOTER) {
@@ -71,7 +84,9 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
+        if(getItemViewType(position)==TYPE_HEADER){
+            HeaderViewHolder headerViewHolder = (HeaderViewHolder) holder;
+        }
     }
 
     @Override
@@ -88,26 +103,27 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     }
 
     public class HeaderViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.layout_main_header_company)
-        LinearLayout layoutMainHeaderCompany;
-        @BindView(R.id.layout_main_header_activity)
-        LinearLayout layoutMainHeaderActivity;
-        @BindView(R.id.layout_main_header_school)
-        LinearLayout layoutMainHeaderSchool;
-        @BindView(R.id.layout_main_header_money)
-        LinearLayout layoutMainHeaderMoney;
-        @BindView(R.id.layout_main_header_category)
-        LinearLayout layoutMainHeaderCategory;
-        @BindView(R.id.layout_main_header_picture)
-        LinearLayout layoutMainHeaderPicture;
-        @BindView(R.id.layout_main_header_order)
-        LinearLayout layoutMainHeaderOrder;
-        @BindView(R.id.layout_main_header_design)
-        LinearLayout layoutMainHeaderDesign;
+//        @BindView(R.id.layout_main_header_company)
+//        LinearLayout layoutMainHeaderCompany;
+//        @BindView(R.id.layout_main_header_activity)
+//        LinearLayout layoutMainHeaderActivity;
+//        @BindView(R.id.layout_main_header_school)
+//        LinearLayout layoutMainHeaderSchool;
+//        @BindView(R.id.layout_main_header_money)
+//        LinearLayout layoutMainHeaderMoney;
+//        @BindView(R.id.layout_main_header_category)
+//        LinearLayout layoutMainHeaderCategory;
+//        @BindView(R.id.layout_main_header_picture)
+//        LinearLayout layoutMainHeaderPicture;
+//        @BindView(R.id.layout_main_header_order)
+//        LinearLayout layoutMainHeaderOrder;
+//        @BindView(R.id.layout_main_header_design)
+//        LinearLayout layoutMainHeaderDesign;
 
         public HeaderViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
         }
     }
 

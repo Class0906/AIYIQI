@@ -1,7 +1,6 @@
 package com.bwf.aiyiqi.gui.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -9,7 +8,7 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 
 import com.bwf.aiyiqi.R;
-import com.bwf.aiyiqi.view.AutoScrollViewPager;
+import com.bwf.aiyiqi.view.AutoScorllViewPager;
 import com.bwflmw.framwork.BaseActivity;
 
 import butterknife.BindView;
@@ -24,7 +23,7 @@ public class ActivityFitment extends BaseActivity {
     @BindView(R.id.main_titile_fitment_img)
     ImageView mainTitileFitmentImg;
     @BindView(R.id.viewPager_main_list_slide)
-    AutoScrollViewPager viewPagerMainListSlide;
+    AutoScorllViewPager viewPagerMainListSlide;
     @BindView(R.id.linearLayout_pager_indicator)
     LinearLayout linearLayoutPagerIndicator;
     @BindView(R.id.activity_fragment_fitment_linner1)
@@ -50,18 +49,14 @@ public class ActivityFitment extends BaseActivity {
     @Override
     protected void initView() {
 
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+
     }
 
     @Override
     protected void initData() {
 
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 
     @OnClick({R.id.activity_fragment_fitment_linner1, R.id.activity_fragment_fitment_linner2, R.id.fitment_look_site, R.id.fitment_site_playing, R.id.fitment_yiqi_group,R.id.main_titile_fitment_img})
