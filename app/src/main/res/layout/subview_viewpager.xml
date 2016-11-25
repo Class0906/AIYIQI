@@ -2,13 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-        >
-
-    <com.bwf.aiyiqi.view.AutoScrollViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@id/viewPager_main_list_slide"
-        android:layout_width="fill_parent"
-        android:layout_height="240.0dip" />
+             >
 
     <LinearLayout
         android:id="@id/linearLayout_pager_indicator"
@@ -19,6 +13,11 @@
         android:layout_gravity="bottom|right"
         android:layout_marginRight="10dp"
         android:orientation="horizontal"
-        />
+        android:background="#00000000"/>
+
+    <com.bwf.aiyiqi.view.AutoScrollViewPager
+        android:id="@id/viewPager_main_list_slide"
+        android:layout_width="fill_parent"
+        android:layout_height="240.0dip" />
 
 </FrameLayout>
