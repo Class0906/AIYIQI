@@ -1,7 +1,6 @@
 package com.bwf.aiyiqi.gui.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -50,18 +49,14 @@ public class ActivityFitment extends BaseActivity {
     @Override
     protected void initView() {
 
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+
     }
 
     @Override
     protected void initData() {
 
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 
     @OnClick({R.id.activity_fragment_fitment_linner1, R.id.activity_fragment_fitment_linner2, R.id.fitment_look_site, R.id.fitment_site_playing, R.id.fitment_yiqi_group,R.id.main_titile_fitment_img})

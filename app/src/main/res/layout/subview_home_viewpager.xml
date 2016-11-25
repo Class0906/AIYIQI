@@ -5,7 +5,7 @@
     <com.bwf.aiyiqi.view.AutoScorllViewPager
         android:id="@id/viewpager_home_title"
         android:layout_width="match_parent"
-        android:layout_height="220dp"/>
+        android:layout_height="200dp"/>
     <LinearLayout
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"

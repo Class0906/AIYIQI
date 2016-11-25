@@ -9,11 +9,7 @@
     <color name="text">#5d5b5a</color>
     <color name="software_textColor_selected">#32CD32</color>
     <color name="software_textColor_unselected">#292929</color>
-<<<<<<< HEAD
     <color name="colorTransport">#00000000</color>
     <color name="color_black">#000000</color>
-=======
     <color name="account_line">#CCCCCC</color>
->>>>>>> 83dfb7987877537b480a1c6cc698879187b2e346
-
 </resources>

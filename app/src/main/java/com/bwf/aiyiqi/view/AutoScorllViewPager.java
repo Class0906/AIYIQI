@@ -16,7 +16,7 @@ import java.util.TimerTask;
  */
 
 public class AutoScorllViewPager extends ViewPager{
-    private final int DURATION = 1500;
+    private final int DURATION = 3000;
     public AutoScorllViewPager(Context context) {
         super(context);
         resetDuration(DURATION);
@@ -47,7 +47,6 @@ public class AutoScorllViewPager extends ViewPager{
     public void setAdapter(PagerAdapter adapter) {
         super.setAdapter(adapter);
         startAutoScroll();
-
     }
 
     private Timer timer = new Timer();
@@ -60,7 +59,7 @@ public class AutoScorllViewPager extends ViewPager{
                     scrollToNext();
                 }
             };
-            timer.schedule(task,2000,2000);
+            timer.schedule(task,3000,3000);
         }
     }
 

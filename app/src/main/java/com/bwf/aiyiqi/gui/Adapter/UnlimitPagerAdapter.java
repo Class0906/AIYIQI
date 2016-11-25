@@ -43,9 +43,9 @@ public class UnlimitPagerAdapter extends PagerAdapter{
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        View view = views.get(position);
+        View view = views.get(position%datas.size());
         SimpleDraweeView image = (SimpleDraweeView) view.findViewById(R.id.image_viewpager_main_page);
-        image.setImageURI(Uri.parse(datas.get(position%datas.size()).getImagesrc()));
+        image.setImageURI(Uri.parse(datas.get(position%datas.size()).getImagesrc2()));
         container.addView(view);
         return view;
     }

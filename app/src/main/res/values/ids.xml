@@ -23,7 +23,6 @@
     <item name="linearLayout_pager_indicator" type="id" />
     <item name="viewPager_main_list_slide" type="id" />
     <item name="main_fragment_recycleview" type="id" />
-<<<<<<< HEAD
     <item name="refreshlayout" type="id" />
     <item name="image_scan" type="id" />
     <item name="text_serch" type="id" />
@@ -41,7 +40,6 @@
     <item name="text_comment_count" type="id" />
     <item name="image_comment" type="id" />
     <item name="text_looked_count" type="id" />
-=======
     <item name="iamgeView_subview_main_slide_page" type="id" />
     <item name="Z_ed_seek_text" type="id" />
     <item name="seek_titile_text" type="id" />
@@ -54,5 +52,5 @@
     <item name="fitment_yiqi_group" type="id" />
     <item name="fitment_site_playing" type="id" />
     <item name="newhouse_webview" type="id" />
->>>>>>> 83dfb7987877537b480a1c6cc698879187b2e346
+    <item name="layout_main_header_company" type="id" />
 </resources>
