@@ -141,6 +141,8 @@ public class FragmentMain extends BaseFragment implements MainView {
         LinearLayout container = (LinearLayout) getView().findViewById(R.id.container_viewpager_indicator);
         indicator = new ViewPagerIndicator(getActivity(), container, data.getData().size());
         indicator.setupWithViewPager(viewpagerHomeTitle);
+        Log.d("FragmentMain", "success");
+        viewpagerHomeTitle.setAdapter(new com.bwf.aiyiqi.gui.adapter.UnlimitPagerAdapter(getActivity(),data.getData()));
     }
 
     @Override

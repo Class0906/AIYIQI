@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/subview_viewpager" />
+            <include layout="@layout/subview_home_viewpager" />
 
             <LinearLayout
                 android:layout_width="match_parent"

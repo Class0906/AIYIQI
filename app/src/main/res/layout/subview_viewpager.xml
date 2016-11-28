@@ -3,7 +3,8 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
         >
-<com.bwf.aiyiqi.view.AutoScorllViewPager
+
+    <com.bwf.aiyiqi.view.AutoScorllViewPager
         android:id="@id/viewPager_main_list_slide"
         android:layout_width="fill_parent"
         android:layout_height="200.0dip" />
