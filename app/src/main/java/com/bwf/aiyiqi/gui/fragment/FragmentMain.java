@@ -2,6 +2,7 @@ package com.bwf.aiyiqi.gui.fragment;
 
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -21,8 +22,12 @@ import com.bwf.aiyiqi.mvp.presenter.MainPresenter;
 import com.bwf.aiyiqi.mvp.presenter.impl.MainPresenterImpl;
 import com.bwf.aiyiqi.mvp.view.MainView;
 import com.bwf.aiyiqi.view.AutoScorllViewPager;
+import com.bwf.aiyiqi.view.NestingRefreshLayout;
+import com.bwf.aiyiqi.view.ViewPagerIndicator;
 import com.bwflmw.framwork.BaseFragment;
+import com.bwflmw.framwork.utils.ToastUtil;
 import com.cjj.MaterialRefreshLayout;
+import com.cjj.MaterialRefreshListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,7 +39,9 @@ import butterknife.OnClick;
  */
 
 public class FragmentMain extends BaseFragment implements MainView {
-
+    @BindView(R.id.appBarLayout)
+    AppBarLayout appBarLayout;
+    private MainPresenter presenter;
     @BindView(R.id.viewpager_home_title)
     AutoScorllViewPager viewpagerHomeTitle;
     @BindView(R.id.container_viewpager_indicator)
@@ -50,7 +57,7 @@ public class FragmentMain extends BaseFragment implements MainView {
     @BindView(R.id.recyclerview)
     RecyclerView recyclerview;
     @BindView(R.id.refreshlayout)
-    MaterialRefreshLayout refreshlayout;
+    NestingRefreshLayout refreshlayout;
 
     @Override
     protected int getContentViewResId() {
@@ -59,16 +66,50 @@ public class FragmentMain extends BaseFragment implements MainView {
 
     @Override
     protected void initData() {
-        MainPresenter presenter = new MainPresenterImpl(this);
+        presenter = new MainPresenterImpl(this);
         presenter.firstLoadData();
     }
 
+    private MainRecyclerViewAdapter adapter;
+    private ViewPagerIndicator indicator;
+    private boolean isLoading =false;
+
     @Override
     protected void initView() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerview.setLayoutManager(layoutManager);
-        recyclerview.setAdapter(new MainRecyclerViewAdapter(getActivity()));
+        adapter = new MainRecyclerViewAdapter(getActivity());
+        recyclerview.setAdapter(adapter);
+        //下拉刷新
+        refreshlayout.setMaterialRefreshListener(new MaterialRefreshListener() {
+            @Override
+            public void onRefresh(MaterialRefreshLayout materialRefreshLayout) {
+                adapter.clearData();
+                presenter.firstLoadData();
+            }
+        });
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if (verticalOffset == 0)
+                    refreshlayout.setisCanPull(true);
+                else
+                    refreshlayout.setisCanPull(false);
+
+            }
+        });
+
+        recyclerview.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if(!isLoading&&layoutManager.findLastVisibleItemPosition()==adapter.getItemCount()-1){
+                    isLoading=true;
+                    presenter.loadMoreData();
+                }
+            }
+        });
     }
 
     @Override
@@ -95,17 +136,29 @@ public class FragmentMain extends BaseFragment implements MainView {
 
     @Override
     public void showMainViewPager(ResponseHomeAD data) {
-        Log.d("FragmentMain", "success");
-        viewpagerHomeTitle.setAdapter(new UnlimitPagerAdapter(getActivity(),data.getData()));
+        refreshlayout.finishRefresh(); //刷新完成
+        viewpagerHomeTitle.setAdapter(new UnlimitPagerAdapter(getActivity(), data.getData()));
+        LinearLayout container = (LinearLayout) getView().findViewById(R.id.container_viewpager_indicator);
+        indicator = new ViewPagerIndicator(getActivity(), container, data.getData().size());
+        indicator.setupWithViewPager(viewpagerHomeTitle);
     }
 
     @Override
     public void showMainRecyclerView(ResponseHomeBBS data) {
-
+        Log.d("FragmentMain", "success");
+        isLoading = false;
+        adapter.addData(data.getData());
     }
 
     @Override
-    public void showFailed() {
-        Log.d("FragmentMain", "failed");
+    public void showViewpagerFailed() {
+        refreshlayout.finishRefresh();//刷新失败
+        ToastUtil.toToast("加载失败，请检查网络");
     }
+
+    @Override
+    public void showRecyclerFailed() {
+        isLoading =false;
+    }
+
 }

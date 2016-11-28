@@ -32,7 +32,6 @@ public class MainModelImpl implements MainModel {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         callback.onLoadFailed();
-                        Log.d("MainModelImpl", "call:" + call);
                     }
 
                     @Override

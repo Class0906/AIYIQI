@@ -10,5 +10,6 @@ import com.bwf.aiyiqi.entity.ResponseHomeBBS;
 public interface MainView {
     void showMainViewPager(ResponseHomeAD data);
     void showMainRecyclerView(ResponseHomeBBS data);
-    void showFailed();
+    void showViewpagerFailed();
+    void showRecyclerFailed();
 }

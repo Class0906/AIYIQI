@@ -31,7 +31,7 @@ public class MainPresenterImpl implements MainPresenter {
 
             @Override
             public void onLoadFailed() {
-                view.showFailed();
+                view.showViewpagerFailed();
             }
         });
         model.loadRecyclerViewData(new MainModel.MainRecyclerViewCallback() {
@@ -42,7 +42,7 @@ public class MainPresenterImpl implements MainPresenter {
 
             @Override
             public void onLoadFailed() {
-                view.showFailed();
+                view.showRecyclerFailed();
             }
         });
     }
@@ -57,7 +57,7 @@ public class MainPresenterImpl implements MainPresenter {
 
             @Override
             public void onLoadFailed() {
-                view.showFailed();
+                view.showRecyclerFailed();
             }
         });
     }

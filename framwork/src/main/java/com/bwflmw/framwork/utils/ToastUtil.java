@@ -10,6 +10,6 @@ import com.bwflmw.framwork.MyApplication;
 
 public class ToastUtil {
     public static void toToast(String message){
-        Toast.makeText(MyApplication.getAppContext(),message,Toast.LENGTH_SHORT);
+        Toast.makeText(MyApplication.getAppContext(),message,Toast.LENGTH_SHORT).show();
     }
 }
