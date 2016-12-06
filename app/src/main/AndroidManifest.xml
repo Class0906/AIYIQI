@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bwf.aiyiqi">
+
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:name="com.bwflmw.framwork.MyApplication"
@@ -12,16 +13,26 @@
         <activity android:name=".gui.activity.ActivityFitment">
 
         </activity>
-        <activity android:name=".gui.activity.GuideActivity"/>
-        <activity android:name=".gui.activity.MainActivity"/>
+        <activity android:name=".gui.activity.GuideActivity" />
+        <activity android:name=".gui.activity.MainActivity" />
+        <activity android:name=".gui.activity.web.NewHouseAcitivity"></activity>
+        <activity android:name=".gui.activity.web.OldHouseActivity"></activity>
         <activity android:name=".gui.activity.ActivitySeek"></activity>
+        <activity android:name=".gui.activity.web.TeamActivity"></activity>
+        <activity android:name=".gui.activity.web.TheSameHtmlActivityFirst" />
+        <activity android:name=".gui.activity.web.TheSameActivity" />
+        <activity android:name=".gui.activity.web.ThrSameHtmlSendActiity" />
+        <activity android:name=".gui.activity.web.DesignDischargeRoomActivity"></activity>
+        <activity android:name=".gui.activity.web.EffectPictureActivity"></activity>
+        <activity android:name=".gui.activity.web.HomeFurnitureActivity" />
+        <activity android:name=".gui.activity.BudgetActivity" />
         <activity android:name=".gui.activity.WelcomeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

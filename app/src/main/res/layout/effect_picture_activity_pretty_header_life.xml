@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@id/effect_picture_activity_life_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@id/rbt_pretty_interspace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableRight="@drawable/effect_picture_pretty_select_picture"
+            android:gravity="center"
+            android:text="@string/pretty_interspace_text"
+            android:textColor="@drawable/effect_picture_pretty_select"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/huise" />
+
+        <RadioButton
+
+            android:id="@id/rbt_pretty_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableRight="@drawable/effect_picture_pretty_select_picture"
+            android:gravity="center"
+            android:text="@string/pretty_style_text"
+            android:textColor="@drawable/effect_picture_pretty_select"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/huise" />
+
+
+        <RadioButton
+            android:id="@id/rbt_pretty_locality"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableRight="@drawable/effect_picture_pretty_select_picture"
+            android:gravity="center"
+            android:text="@string/pretty_locality_text"
+            android:textColor="@drawable/effect_picture_pretty_select"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/huise" />
+
+
+        <RadioButton
+            android:id="@id/rbt_pretty_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableRight="@drawable/effect_picture_pretty_select_picture"
+            android:gravity="center"
+            android:text="@string/pretty_color_text"
+            android:textColor="@drawable/effect_picture_pretty_select"
+            android:textSize="16sp" />
+
+
+    </RadioGroup>
+</LinearLayout>

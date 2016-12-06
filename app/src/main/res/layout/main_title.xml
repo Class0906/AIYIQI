@@ -6,58 +6,62 @@
     android:gravity="center">
 
     <ImageView
-        android:layout_alignParentLeft="true"
         android:id="@id/image_scan"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:padding="10dp"
-        android:src="@mipmap/home_title_scan"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:padding="10dp"
+        android:src="@mipmap/home_title_scan" />
 
     <ImageView
-        android:layout_centerVertical="true"
         android:id="@+id/image_home_flag"
-        android:padding="10dp"
-        android:layout_alignParentRight="true"
         android:layout_width="30dp"
-            android:paddingBottom="3dp"
-            android:paddingTop="3dp"
         android:layout_height="30dp"
-        android:src="@mipmap/home_title_location_flag"/>
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:src="@mipmap/home_title_location_flag" />
+
     <TextView
         android:id="@id/text_city"
-        android:textSize="18sp"
-        android:gravity="center"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:textColor="@color/white"
-        android:text="成都"
-        android:layout_toLeftOf="@id/image_home_flag"/>
-    <LinearLayout
-        android:layout_centerVertical="true"
-        android:background="@drawable/shape_search_bg"
+        android:layout_toLeftOf="@id/image_home_flag"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:text="成都"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <LinearLayout
         android:id="@id/layout_home_title_search"
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:layout_centerVertical="true"
         android:layout_toLeftOf="@id/text_city"
-        android:layout_toRightOf="@id/image_scan">
+        android:layout_toRightOf="@id/image_scan"
+        android:background="@drawable/shape_search_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <ImageView
-            android:layout_marginLeft="15dp"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@mipmap/home_search"/>
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/home_search" />
+
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
             android:layout_marginLeft="8dp"
             android:gravity="center_vertical"
-            android:textSize="16sp"
-            android:textColor="@color/white"
             android:text="@string/text_head_title_serch"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"/>
-            android:paddingBottom="3dp"
-            android:paddingTop="3dp"/>
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"/>
     </LinearLayout>
 </RelativeLayout>

@@ -15,12 +15,13 @@ import android.widget.TextView;
 import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.entity.ResponseHomeAD;
 import com.bwf.aiyiqi.entity.ResponseHomeBBS;
-import com.bwf.aiyiqi.gui.adapter.MainRecyclerViewAdapter;
-import com.bwf.aiyiqi.gui.adapter.UnlimitPagerAdapter;
+import com.bwf.aiyiqi.gui.adpter.MainRecyclerViewAdapter;
+import com.bwf.aiyiqi.gui.adpter.UnlimitPagerAdapter;
 import com.bwf.aiyiqi.mvp.presenter.MainPresenter;
 import com.bwf.aiyiqi.mvp.presenter.impl.MainPresenterImpl;
 import com.bwf.aiyiqi.mvp.view.MainView;
 import com.bwf.aiyiqi.view.AutoScorllViewPager;
+import com.bwf.aiyiqi.view.ViewPagerIndicator;
 import com.bwflmw.framwork.BaseFragment;
 import com.cjj.MaterialRefreshLayout;
 
@@ -34,7 +35,7 @@ import butterknife.OnClick;
  */
 
 public class FragmentMain extends BaseFragment implements MainView {
-
+    private ViewPagerIndicator indicator;
     @BindView(R.id.viewpager_home_title)
     AutoScorllViewPager viewpagerHomeTitle;
     @BindView(R.id.container_viewpager_indicator)
@@ -95,8 +96,11 @@ public class FragmentMain extends BaseFragment implements MainView {
 
     @Override
     public void showMainViewPager(ResponseHomeAD data) {
-        Log.d("FragmentMain", "success");
+        Log.e("FragmentMain", "success");
         viewpagerHomeTitle.setAdapter(new UnlimitPagerAdapter(getActivity(),data.getData()));
+        //加载indicator
+        indicator=new ViewPagerIndicator(getContext(),containerViewpagerIndicator,data.getData().size());
+        indicator.setupWithViewPager(viewpagerHomeTitle);
     }
 
     @Override
