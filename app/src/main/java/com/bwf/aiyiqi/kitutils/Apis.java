@@ -74,4 +74,6 @@ public interface Apis {
      * 装修报价
      */
     String BUDGET_SPECOAL = "http://m.beijing.17house.com/baojia/?sem=android&model=android";
+
+
 }

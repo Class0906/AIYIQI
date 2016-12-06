@@ -64,7 +64,7 @@
             android:id="@id/design_discharge_room_activity_viewpager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/huise"
+            android:background="@color/light_grey"
             android:layout_weight="1" />
 
 </LinearLayout>

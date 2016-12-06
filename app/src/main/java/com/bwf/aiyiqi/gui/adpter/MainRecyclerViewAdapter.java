@@ -1,12 +1,15 @@
 package com.bwf.aiyiqi.gui.adpter;
-
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bwf.aiyiqi.R;
@@ -44,8 +47,14 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         this.contenx = context;
     }
 
-    public void addData() {
-        data.addAll(data);
+    public void addData(List<ResponseHomeBBS.DataBean> bbsData) {
+        data.addAll(bbsData);
+        notifyDataSetChanged();
+    }
+
+    //刷新时候调用
+    public void clearData(){
+        data.clear();
         notifyDataSetChanged();
     }
 
@@ -55,7 +64,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             return TYPE_HEADER;
         if (position == getItemCount() - 1)
             return TYPE_FOOTER;
-        if (data.get(position).getType() == 1) {
+        if (getItem(position).getType() == 1) { //type==1 文章  type==3 帖子
             return TYPE_ARTICLE;
         } else
             return TYPE_BBS;
@@ -119,20 +128,47 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         }
         if (viewType == TYPE_FOOTER) {
             View footerView = inflater.inflate(R.layout.item_footer_main_recycler, parent, false);
-            return new HeaderViewHolder(footerView);
+            return new FooterViewHolder(footerView);
         }
         if (viewType == TYPE_ARTICLE) {
             View articleView = inflater.inflate(R.layout.item_article_main_recycler, parent, false);
-            return new HeaderViewHolder(articleView);
+            return new ArticleViewHolder(articleView);
         }
-        return null;
+        View bbsView = inflater.inflate(R.layout.item_bbs_main_recycler, parent, false);
+        return new BbsViewHolder(bbsView);
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (getItemViewType(position) == TYPE_HEADER) {
             HeaderViewHolder headerViewHolder = (HeaderViewHolder) holder;
+        } else if (getItemViewType(position) == TYPE_FOOTER) {
+            FooterViewHolder footerViewHolder = (FooterViewHolder) holder;
+        } else if (getItemViewType(position) == TYPE_ARTICLE) {
+            ArticleViewHolder articleViewHolder = (ArticleViewHolder) holder;
+            articleViewHolder.textMainRecyclerItemTitle.setText(getItem(position).getTitle());
+            articleViewHolder.imageMainRecyclerItem.setImageURI(Uri.parse(getItem(position).getPath()));
+            articleViewHolder.textPublishTime.setText(getItem(position).getDateline());
+            articleViewHolder.textLookedCount.setText(getItem(position).getViews() + "");
+            articleViewHolder.textCommentCount.setText(getItem(position).getReplies());
+        } else if (getItemViewType(position) == TYPE_BBS) {
+            BbsViewHolder bbsViewHolder = (BbsViewHolder) holder;
+            bbsViewHolder.textBbsTitle.setText(getItem(position).getTitle());
+            bbsViewHolder.imageAuthorBbsFace.setImageURI(Uri.parse(getItem(position).getAvtUrl()));
+            bbsViewHolder.textNickName.setText(getItem(position).getAuthor());
+            bbsViewHolder.textPublishTime.setText(getItem(position).getDateline());
+            //bbs可能没有图片，此时path为null，设置控件隐藏
+            if (!TextUtils.isEmpty(getItem(position).getPath()))
+                bbsViewHolder.imageBbsItem.setImageURI(Uri.parse(getItem(position).getPath()));
+            else
+                bbsViewHolder.imageBbsItem.setVisibility(View.GONE);
+            bbsViewHolder.textCommentCount.setText(getItem(position).getReplies());
+            bbsViewHolder.textLookedCount.setText(getItem(position).getViews() + "");
         }
+    }
+
+    public ResponseHomeBBS.DataBean getItem(int position) {
+        return data.get(position - getHeaderCount());
     }
 
     @Override
@@ -183,6 +219,36 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         TextView textLookedCount;
 
         ArticleViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+        }
+    }
+
+    public class BbsViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.image_author_bbs_face)
+        SimpleDraweeView imageAuthorBbsFace;
+        @BindView(R.id.text_nick_name)
+        TextView textNickName;
+        @BindView(R.id.layout_add_attention)
+        LinearLayout layoutAddAttention;
+        @BindView(R.id.text_bbs_title)
+        TextView textBbsTitle;
+        @BindView(R.id.image_bbs_item)
+        SimpleDraweeView imageBbsItem;
+        @BindView(R.id.text_linked_to_bbs)
+        TextView textLinkedToBbs;
+        @BindView(R.id.text_comment_count)
+        TextView textCommentCount;
+        @BindView(R.id.image_comment)
+        ImageView imageComment;
+        @BindView(R.id.relativeLayout_recycler_bottom)
+        RelativeLayout relativeLayoutRecyclerBottom;
+        @BindView(R.id.text_publish_time)
+        TextView textPublishTime;
+        @BindView(R.id.text_looked_count)
+        TextView textLookedCount;
+
+        public BbsViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

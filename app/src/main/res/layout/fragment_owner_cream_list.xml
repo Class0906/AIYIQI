@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@id/P_cream_auther_img"
+        android:layout_width="34.0dip"
+        android:layout_height="34.0dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/home_feature_quoted_price"
+        app:roundAsCircle="true"/>
+
+    <TextView
+        android:id="@id/P_cream_auther_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/P_cream_auther_img"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/P_cream_auther_img"
+        android:text="author_name"
+        android:textColor="@color/balck"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@id/P_house_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/P_cream_auther_img"
+        android:layout_alignLeft="@id/P_cream_auther_name"
+        android:layout_below="@id/P_cream_auther_name"
+        android:layout_marginTop="3dp"
+        android:singleLine="true"
+        android:text="房屋概况"
+        android:textColor="@color/light_grey"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@id/P_cream_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/P_cream_auther_img"
+        android:layout_below="@id/P_cream_auther_img"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="主题"
+        android:textColor="@color/balck"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@id/P_cream_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/light_balck"
+        android:background="@drawable/owner_cream_tag_shape"
+        android:text="关键词"
+        android:layout_below="@id/P_cream_subject"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@id/P_cream_main_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/P_cream_tag"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@id/P_cream_choose"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@id/P_cream_auther_img"
+        android:layout_below="@id/P_cream_main_img"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/P_cream_chooseby"
+            android:textColor="@color/dark_blue"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/arrow_r"/>
+    </LinearLayout>
+
+    <View
+        android:id="@id/P_cream_view_small"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/P_cream_auther_img"
+        android:layout_below="@id/P_cream_choose"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/light_grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/P_cream_auther_img"
+        android:layout_below="@id/P_cream_view_small"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@id/P_cream_publish_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发布时间"
+            android:textColor="@color/light_grey"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@id/P_cream_ll_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@id/P_cream_like_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/owner_cream_like_selector"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/light_grey"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/P_cream_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@id/P_cream_like_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/comment_normal"/>
+
+                <TextView
+                    android:id="@id/P_cream_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/comment_count"
+                    android:textColor="@color/light_grey"
+                    android:textSize="13dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/light_grey"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@id/P_cream_share_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/P_cream_comment"
+                android:src="@mipmap/share_normal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
