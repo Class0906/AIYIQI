@@ -5,7 +5,7 @@
     android:gravity="center"
     android:orientation="horizontal">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -13,13 +13,25 @@
 
         <EditText
             android:id="@id/Z_ed_seek_text"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edittext"
-            android:drawableLeft="@drawable/search_normal" />
+            android:drawableLeft="@drawable/search_normal">
+            <requestFocus/>
+        </EditText>
+        <ImageView
+            android:id="@id/image_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_clear"
+            android:layout_marginEnd="5dp"
+            android:visibility="gone"/>
 
-
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="0dp"

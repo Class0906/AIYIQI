@@ -30,10 +30,10 @@ import butterknife.ButterKnife;
 public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<ResponseHomeBBS.DataBean> data;
     private LayoutInflater inflater;
-    private int TYPE_HEADER = 0;
-    private int TYPE_FOOTER = 1;
-    private int TYPE_ARTICLE = 2;
-    private int TYPE_BBS = 3;
+    public static int TYPE_HEADER = 0;
+    public static int TYPE_FOOTER = 1;
+    public static int TYPE_ARTICLE = 2;
+    public static int TYPE_BBS = 3;
     private Context contenx;
 
 
@@ -49,7 +49,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     }
 
     //刷新时候调用
-    public void clearData(){
+    public void clearData() {
         data.clear();
         notifyDataSetChanged();
     }
@@ -193,6 +193,13 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         ArticleViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (listener != null)
+                        listener.onItemClick(getAdapterPosition());
+                }
+            });
         }
     }
 
@@ -223,6 +230,22 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         public BbsViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (listener != null)
+                        listener.onItemClick(getAdapterPosition());
+                }
+            });
         }
+    }
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    private OnItemClickListener listener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 }

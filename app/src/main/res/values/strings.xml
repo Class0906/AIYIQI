@@ -6,7 +6,7 @@
     <string name="text_choose_birthday">选择生日：</string>
     <string name="main_title_city">城市</string>
     <string name="P_cream_chooseby">精选自%1$s</string>
-    <string name="comment_count">%1$s</string>
+    <string name="comment_count">评论（%1$d）</string>
     <string name="P_appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="text_head_title_serch">搜索用户/帖子</string>
     <string name="seek_quxiao">取消</string>
@@ -22,4 +22,7 @@
     <string name="yiqi_group">一起团队</string>
     <string name="site_playing">工地直播</string>
     <string name="zhuangxiuzhibo">装修直播</string>
+    <string name="text_linked_to_bbs"><![CDATA[精选自北京装修论坛>]]></string>
+    <string name="liked_count">赞(%1$d)</string>
+    <string name="reply_count">回帖（%1$d）</string>
 </resources>

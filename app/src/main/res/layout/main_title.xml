@@ -27,7 +27,7 @@
         android:src="@mipmap/home_title_location_flag"/>
     <TextView
         android:id="@id/text_city"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:gravity="center"
         android:layout_width="40dp"
         android:layout_height="40dp"

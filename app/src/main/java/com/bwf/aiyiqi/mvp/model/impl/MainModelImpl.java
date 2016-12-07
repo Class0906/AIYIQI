@@ -19,8 +19,8 @@ import okhttp3.Call;
 
 public class MainModelImpl implements MainModel {
     private int nextPage = 1;
-    private int lastType;
-    private String lastId;
+    private int lastType=0;
+    private String lastId="";
 
     @Override
     public void loadViewpagerData(final MainModelCallback callback) {
@@ -36,7 +36,6 @@ public class MainModelImpl implements MainModel {
 
                     @Override
                     public void onResponse(String response, int id) {
-                        Log.d("MainModelImpl", response);
                         ResponseHomeAD data = JSON.parseObject(response, ResponseHomeAD.class);
                         callback.onLoadSuccess(data);
                     }
@@ -45,6 +44,10 @@ public class MainModelImpl implements MainModel {
 
     @Override
     public void loadRecyclerViewData(final MainRecyclerViewCallback callback) {
+
+        Log.d("MainModelImpl", "lastType:"+lastId);
+        Log.d("MainModelImpl", "lastType:" + lastType);
+        Log.d("MainModelImpl", "nextPage:" + nextPage);
         if (nextPage == 1) {
             OkHttpUtils.get()
                     .url(Apis.HOME_BBS_BASE)
@@ -61,6 +64,8 @@ public class MainModelImpl implements MainModel {
                             if (error.equals("0")){
                                 callback.onLoadSuccess(data);
                                 nextPage++;
+                                Log.d("MainModelImpl", "nextPage::" + nextPage);
+
                                 lastType = data.getData().get(data.getData().size()-1).getType();
                                 lastId = data.getData().get(data.getData().size()-1).getId();
 
@@ -70,7 +75,7 @@ public class MainModelImpl implements MainModel {
                     });
         }else {
             OkHttpUtils.get()
-                    .url(UrlHandler.handleUrl(Apis.HOME_BBS_MORE,nextPage,lastType,lastId))
+                    .url(UrlHandler.handleUrl(Apis.HOME_BBS_MORE,lastId,lastType,nextPage))
                     .build()
                     .execute(new StringCallback() {
                         @Override
@@ -83,6 +88,7 @@ public class MainModelImpl implements MainModel {
                             String error = data.getError();
                             if (error.equals("0")){
                                 callback.onLoadSuccess(data);
+
                                 nextPage++;
                                 lastType = data.getData().get(data.getData().size()-1).getType();
                                 lastId = data.getData().get(data.getData().size()-1).getId();

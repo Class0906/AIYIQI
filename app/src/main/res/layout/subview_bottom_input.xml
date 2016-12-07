@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize">
+    <ImageView
+        android:id="@id/image_article_share"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:src="@mipmap/article_share"
+        android:padding="16dp"
+        android:layout_alignParentRight="true"/>
+    <ImageView
+        android:id="@id/image_article_collect"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:src="@mipmap/article_uncollect"
+        android:padding="16dp"
+        android:layout_toLeftOf="@id/image_article_share"
+        android:layout_marginRight="10dp"/>
+
+
+    <EditText
+        android:id="@id/text_bbs_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入评论"
+        android:layout_toLeftOf="@id/image_article_collect"
+        android:textSize="14sp"
+        android:background="@drawable/shape_edit_bg_bbs"
+        android:paddingLeft="15dp"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        >
+        <requestFocus/>
+    </EditText>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_black"
+        />
+</RelativeLayout>

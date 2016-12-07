@@ -86,7 +86,7 @@
             android:layout_marginLeft="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="精选自北京装修论坛>"
+            android:text="@string/text_linked_to_bbs"
             android:textColor="@color/color_linked"
             />
         <TextView
@@ -104,13 +104,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/comment_hui"/>
-        <!--<TextView-->
-            <!--android:id="@+id/text_looked_count_bbs"-->
-            <!--android:layout_marginRight="20dp"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="385"-->
-            <!--android:layout_toLeftOf="@id/image_comment"/>-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -4,12 +4,18 @@ package com.bwf.aiyiqi.kitutils;
  * Created by lmw on 2016/11/24.
  */
 
- public interface Constant {
-    /**sharedpreferences文件名**/
+public interface Constant {
+    /**
+     * sharedpreferences文件名
+     **/
     String SP_USER_INFO = "userInfo";
     String FIRSTUSE = "firstUse";
     String USER_SEX = "userSex";
     String USER_BIRTHDAY = "birthday";
     String FITMENT_PALN = "paln";
     String CANCEL_COUNT = "cancelCount";
+
+    /**Intent传递id的key**/
+    String INTENT_ID_KEY = "targetId";
+    String INTENT_TITLE_KEY = "title";
 }

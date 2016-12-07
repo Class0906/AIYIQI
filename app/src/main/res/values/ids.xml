@@ -80,4 +80,40 @@
     <item name="image_bbs_item" type="id" />
     <item name="text_linked_to_bbs" type="id" />
     <item name="relativeLayout_recycler_bottom" type="id" />
+    <item name="text_header_title" type="id" />
+    <item name="image_header_back" type="id" />
+    <item name="image_article_share" type="id" />
+    <item name="image_article_collect" type="id" />
+    <item name="image_article_like" type="id" />
+    <item name="text_bbs_reply" type="id" />
+    <item name="text_author_tag" type="id" />
+    <item name="layout_content_container" type="id" />
+    <item name="text_paragraph" type="id" />
+    <item name="image_paragraph" type="id" />
+    <item name="layout_tag" type="id" />
+    <item name="text_tag" type="id" />
+    <item name="layout_liked" type="id" />
+    <item name="text_liked_count" type="id" />
+    <item name="image_user_face" type="id" />
+    <item name="ll_share_to_wechat_friend" type="id" />
+    <item name="ll_share_to_wechat_moment" type="id" />
+    <item name="ll_share_to_QQ_friend" type="id" />
+    <item name="image_ad_bar" type="id" />
+    <item name="ll_no_comments_can_hide" type="id" />
+    <item name="image_reply" type="id" />
+    <item name="layout_comment_content" type="id" />
+    <item name="text_block" type="id" />
+    <item name="text_comment" type="id" />
+    <item name="image_comment_content" type="id" />
+    <item name="webview_news" type="id" />
+    <item name="text_footer" type="id" />
+    <item name="image_preview" type="id" />
+    <item name="image_eye" type="id" />
+    <item name="text_collection_count" type="id" />
+    <item name="image_collection" type="id" />
+    <item name="text_comment_content" type="id" />
+    <item name="list_view" type="id" />
+    <item name="ll_relative_user_container" type="id" />
+    <item name="image_clear" type="id" />
+    <item name="ll_search_no_more" type="id" />
 </resources>
