@@ -14,11 +14,21 @@
         <activity android:name=".gui.activity.GuideActivity"/>
         <activity android:name=".gui.activity.MainActivity"/>
         <activity android:name=".gui.activity.ActivitySeek"
-            android:windowSoftInputMode=""/>
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".gui.activity.web.NewHouseAcitivity"></activity>
+        <activity android:name=".gui.activity.web.OldHouseActivity"></activity>
+        <activity android:name=".gui.activity.web.TeamActivity"></activity>
+        <activity android:name=".gui.activity.web.TheSameHtmlActivityFirst" />
+        <activity android:name=".gui.activity.web.TheSameActivity" />
+        <activity android:name=".gui.activity.web.ThrSameHtmlSendActiity" />
+        <activity android:name=".gui.activity.web.DesignDischargeRoomActivity"></activity>
+        <activity android:name=".gui.activity.web.EffectPictureActivity"></activity>
+        <activity android:name=".gui.activity.web.HomeFurnitureActivity" />
+        <activity android:name=".gui.activity.BudgetActivity" />
         <activity android:name=".gui.activity.WelcomeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".gui.activity.BBSActivity"/>
@@ -30,8 +40,7 @@
             android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            ></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- Zxing 二维码权限-->
@@ -44,7 +53,5 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-
 
 </manifest>

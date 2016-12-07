@@ -27,4 +27,5 @@ dependencies {
     compile project(':framwork')
     compile project(':lib-zxing')
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.android.support:design:24.1.1'
 }

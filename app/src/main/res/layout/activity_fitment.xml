@@ -6,22 +6,23 @@
     <!--装修公司界面-->
     <include layout="@layout/main_title_fitment"></include>
 
-    <ScrollView
+    <com.bwf.aiyiqi.view.MyScrollView
         android:id="@id/scrollView_fitment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/subview_home_viewpager" />
+            <include layout="@layout/subview_fitment_viewpager"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
                 android:showDividers="middle"
                 android:divider="@drawable/main_fengexian"
                 android:orientation="horizontal">
@@ -108,13 +109,13 @@
                     android:text="@string/zhuangxiuzhibo"
                     android:textStyle="bold" />
 
-                <ListView
+                <com.bwf.aiyiqi.view.MyListView
                     android:id="@id/Decorate_live_linner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                </ListView>
+                </com.bwf.aiyiqi.view.MyListView>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </com.bwf.aiyiqi.view.MyScrollView>
 </LinearLayout>

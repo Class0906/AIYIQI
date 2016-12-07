@@ -18,7 +18,7 @@ public class ViewPagerIndicator {
     private int count;
     private LayoutInflater inflater;
 
-    public ViewPagerIndicator(Context context, LinearLayout container,int count) {
+    public ViewPagerIndicator(Context context, LinearLayout container, int count) {
         inflater = LayoutInflater.from(context);
         this.container = container;
         this.count = count;
@@ -26,28 +26,29 @@ public class ViewPagerIndicator {
 
     /**
      * 必须在viewpager获取数据之后再设置关联
+     *
      * @param viewPager
      */
-    public void setupWithViewPager(ViewPager viewPager){
+    public void setupWithViewPager(ViewPager viewPager) {
         container.removeAllViews();
-        for(int i=0;i<count;i++){
-            View view = inflater.inflate(R.layout.indicator_viewpager_dot,container,false);
+        for (int i = 0; i < count; i++) {
+            View view = inflater.inflate(R.layout.indicator_viewpager_dot, container, false);
             ImageView iv = (ImageView) view.findViewById(R.id.image_indicator);
-            if(i ==0){
-                    iv.setImageResource(R.mipmap.indicator);
-            }else
+            if (i == 0) {
+                iv.setImageResource(R.mipmap.indicator);
+            } else
                 iv.setImageResource(R.mipmap.indicator_nor);
             container.addView(view);
         }
-        viewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+        viewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 for (int i = 0; i < count; i++) {
                     ImageView iv = (ImageView) container.getChildAt(i).findViewById(R.id.image_indicator);
-                    if(i ==position%count){
+                    if (i == position % count) {
                         iv.setImageResource(R.mipmap.indicator);
-                    }else
+                    } else
                         iv.setImageResource(R.mipmap.indicator_nor);
                 }
             }

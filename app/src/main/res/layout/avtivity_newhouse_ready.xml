@@ -6,16 +6,27 @@
     <!--新房整装h5界面-->
     <include layout="@layout/main_title_fitment"></include>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
+        <include
+            layout="@layout/main_newhouse_foot"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom">
+
+        </include>
 
         <WebView
             android:id="@id/newhouse_webview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></WebView>
+            android:layout_marginBottom="40dp"
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+        </WebView>
 
-    <include layout="@layout/main_newhouse_foot"></include>
+    </FrameLayout>
+
 </LinearLayout>

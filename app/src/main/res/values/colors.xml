@@ -19,10 +19,8 @@
     <color name="P_colorPrimary">#ff00a051</color>
     <color name="light_grey">#ffcccccc</color>
     <color name="dark_blue">#ff0000ee</color>
-
     <color name="colorTransport">#00000000</color>
     <color name="color_black">#000000</color>
     <color name="account_line">#CCCCCC</color>
-    <color name="color_linked">#31429d</color>
-
+    <color name="color_linked" >#ff0000ee</color>
 </resources>

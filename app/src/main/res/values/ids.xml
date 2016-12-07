@@ -23,26 +23,26 @@
     <item name="linearLayout_pager_indicator" type="id" />
     <item name="viewPager_main_list_slide" type="id" />
     <item name="main_fragment_recycleview" type="id" />
-    <item name="imageView_indicator_dot" type="id"/>
-    <item name="P_owner_title_search_img" type="id"/>
-    <item name="P_ownner_tabLayout_title" type="id"/>
-    <item name="P_cream_auther_img" type="id"/>
-    <item name="P_cream_auther_name" type="id"/>
-    <item name="P_house_info" type="id"/>
-    <item name="P_cream_main_img" type="id"/>
-    <item name="P_cream_author" type="id"/>
-    <item name="P_cream_subject" type="id"/>
-    <item name="P_cream_choose" type="id"/>
-    <item name="P_cream_publish_time" type="id"/>
-    <item name="P_cream_view_small" type="id"/>
-    <item name="P_cream_like_heart" type="id"/>
-    <item name="P_cream_comment" type="id"/>
-    <item name="P_cream_comment_count" type="id"/>
-    <item name="P_cream_ll_like" type="id"/>
-    <item name="P_cream_share_img" type="id"/>
-    <item name="P_cream_tag" type="id"/>
-    <item name="P_owner_cream_view" type="id"/>
-    <item name="P_owner_viewpager" type="id"/>
+    <item name="imageView_indicator_dot" type="id" />
+    <item name="P_owner_title_search_img" type="id" />
+    <item name="P_ownner_tabLayout_title" type="id" />
+    <item name="P_cream_auther_img" type="id" />
+    <item name="P_cream_auther_name" type="id" />
+    <item name="P_house_info" type="id" />
+    <item name="P_cream_main_img" type="id" />
+    <item name="P_cream_author" type="id" />
+    <item name="P_cream_subject" type="id" />
+    <item name="P_cream_choose" type="id" />
+    <item name="P_cream_publish_time" type="id" />
+    <item name="P_cream_view_small" type="id" />
+    <item name="P_cream_like_heart" type="id" />
+    <item name="P_cream_comment" type="id" />
+    <item name="P_cream_comment_count" type="id" />
+    <item name="P_cream_ll_like" type="id" />
+    <item name="P_cream_share_img" type="id" />
+    <item name="P_cream_tag" type="id" />
+    <item name="P_owner_cream_view" type="id" />
+    <item name="P_owner_viewpager" type="id" />
     <item name="refreshlayout" type="id" />
     <item name="image_scan" type="id" />
     <item name="text_serch" type="id" />
@@ -116,4 +116,73 @@
     <item name="ll_relative_user_container" type="id" />
     <item name="image_clear" type="id" />
     <item name="ll_search_no_more" type="id" />
+    <item name="image_viewpager_fitment_page" type="id" />
+    <item name="viewpager_fitment_title" type="id" />
+    <item name="FitmentDirectSeeding_image_listview" type="id" />
+    <item name="FitmentDirectSeeding_Text1_listview" type="id" />
+    <item name="FitmentDirectSeeding_Text2_listview" type="id" />
+    <item name="icluce_text_activity" type="id" />
+    <item name="includ_decorate_answer" type="id" />
+    <item name="includ_decorate_contact" type="id" />
+    <item name="fitment_team_title_tab" type="id" />
+    <item name="fitment_team_title_fra" type="id" />
+    <item name="fitment_team_title_tablayout" type="id" />
+    <item name="sub_fragment_fitment_team_text" type="id" />
+    <item name="fitment_team_title_viewpgaer" type="id" />
+    <item name="fitment_team_title_gridview" type="id" />
+    <item name="image_viewpager_main_gridview" type="id" />
+    <item name="team_gridview_text" type="id" />
+    <item name="team_gridview_text_case_ceshi" type="id" />
+    <item name="rating_score" type="id" />
+    <item name="activity_the_same_recyclerview" type="id" />
+    <item name="activity_the_same_recyclerview_simple" type="id" />
+    <item name="activity_the_same_recyclerview_text" type="id" />
+    <item name="activity_the_same_listview" type="id" />
+    <item name="trame_sub_webview" type="id" />
+    <item name="trame_sub_html_send_ed" type="id" />
+    <item name="ic_taochan_like_trame_html" type="id" />
+    <item name="article_uncollect_trame_html" type="id" />
+    <item name="ic_share_trame_html" type="id" />
+    <item name="trame_sub_webview_send" type="id" />
+    <item name="trame_sub_webview_fist" type="id" />
+    <item name="design_discharge_room_activity_tablayout" type="id" />
+    <item name="design_discharge_room_activity_viewpager" type="id" />
+    <item name="design_discharge_room_activity_back" type="id" />
+    <item name="design_discharge_room_activity_call" type="id" />
+    <item name="design_discharge_room_ragment_web" type="id" />
+    <item name="effect_picture_activity_list" type="id" />
+    <item name="effect_picture_simpleiagme" type="id" />
+    <item name="effect_picture_textview" type="id" />
+    <item name="effect_picture_activity_list_text" type="id" />
+    <item name="effect_picture_tushang" type="id" />
+    <item name="pretty_interspace" type="id" />
+    <item name="pretty_style" type="id" />
+    <item name="pretty_locality" type="id" />
+    <item name="pretty_color" type="id" />
+    <item name="interspace_text" type="id" />
+    <item name="style_text" type="id" />
+    <item name="locality_text" type="id" />
+    <item name="color_text" type="id" />
+    <item name="view_interspace" type="id" />
+    <item name="view_style" type="id" />
+    <item name="view_locality" type="id" />
+    <item name="view_color" type="id" />
+    <item name="rbt_pretty_interspace" type="id" />
+    <item name="rbt_pretty_style" type="id" />
+    <item name="rbt_pretty_locality" type="id" />
+    <item name="rbt_pretty_color" type="id" />
+    <item name="effect_picture_activity_gridview" type="id" />
+    <item name="effect_picture_activity_list_ad" type="id" />
+    <item name="effect_picture_activity_list_grid_text" type="id" />
+    <item name="effect_picture_activity_list_view_text" type="id" />
+    <item name="effect_picture_activity_life_radiogroup" type="id" />
+    <item name="eff_picture_popuwindow_gridview" type="id" />
+    <item name="eff_picture_dialog_gridview_adpter_btn" type="id" />
+    <item name="eff_picture_popuwindow_gridview_list" type="id" />
+    <item name="refreshlayout_activity" type="id" />
+    <item name="home_first_gridview" type="id" />
+    <item name="home_send_gridview" type="id" />
+    <item name="home_four_gridview" type="id" />
+    <item name="home_third_gridview" type="id" />
+    <item name="list_home_first_adpter_text" type="id" />
 </resources>

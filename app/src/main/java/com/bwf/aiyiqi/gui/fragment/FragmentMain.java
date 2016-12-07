@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,8 +26,8 @@ import com.bwf.aiyiqi.entity.ResponseHomeBBS;
 import com.bwf.aiyiqi.gui.activity.ActivitySeek;
 import com.bwf.aiyiqi.gui.activity.BBSActivity;
 import com.bwf.aiyiqi.gui.activity.NewsActivity;
-import com.bwf.aiyiqi.gui.adapter.MainRecyclerViewAdapter;
-import com.bwf.aiyiqi.gui.adapter.UnlimitPagerAdapter;
+import com.bwf.aiyiqi.gui.adpter.MainRecyclerViewAdapter;
+import com.bwf.aiyiqi.gui.adpter.UnlimitPagerAdapter;
 import com.bwf.aiyiqi.kitutils.Constant;
 import com.bwf.aiyiqi.mvp.presenter.MainPresenter;
 import com.bwf.aiyiqi.mvp.presenter.impl.MainPresenterImpl;
@@ -44,7 +45,6 @@ import com.uuzuche.lib_zxing.activity.CodeUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
 
 /**
  * Created by Zoulin on 2016/11/23.
@@ -71,6 +71,7 @@ public class FragmentMain extends BaseFragment implements MainView {
     @BindView(R.id.refreshlayout)
     NestingRefreshLayout refreshlayout;
 
+
     @Override
     protected int getContentViewResId() {
         return R.layout.fragment_main;
@@ -86,8 +87,8 @@ public class FragmentMain extends BaseFragment implements MainView {
     private MainRecyclerViewAdapter adapter;
     private ViewPagerIndicator indicator;
     private boolean isLoading;
-    private String[] cities = {"北京", "上海", "天津", "石家庄", "西安", "武汉", "成都", "哈尔滨", "大连", "济南"};
 
+    private String[] cities = {"北京", "上海", "天津", "石家庄", "西安", "武汉", "成都", "哈尔滨", "大连", "济南"};
     @Override
     protected void initView() {
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -213,6 +214,11 @@ public class FragmentMain extends BaseFragment implements MainView {
 
     @Override
     public void showMainViewPager(ResponseHomeAD data) {
+        Log.e("FragmentMain", "success");
+        viewpagerHomeTitle.setAdapter(new UnlimitPagerAdapter(getActivity(), data.getData()));
+        //加载indicator
+        indicator = new ViewPagerIndicator(getContext(), containerViewpagerIndicator, data.getData().size());
+        indicator.setupWithViewPager(viewpagerHomeTitle);
         refreshlayout.finishRefresh(); //刷新完成
         viewpagerHomeTitle.setAdapter(new UnlimitPagerAdapter(getActivity(), data.getData()));
         LinearLayout container = (LinearLayout) getView().findViewById(R.id.container_viewpager_indicator);

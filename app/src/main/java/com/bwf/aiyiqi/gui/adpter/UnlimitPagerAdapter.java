@@ -1,4 +1,4 @@
-package com.bwf.aiyiqi.gui.adapter;
+package com.bwf.aiyiqi.gui.adpter;
 
 import android.content.Context;
 import android.net.Uri;
@@ -33,7 +33,7 @@ public class UnlimitPagerAdapter extends PagerAdapter{
 
     @Override
     public int getCount() {
-        return Integer.MAX_VALUE;
+        return views.size();
     }
 
     @Override

@@ -1,5 +1,4 @@
-package com.bwf.aiyiqi.gui.adapter;
-
+package com.bwf.aiyiqi.gui.adpter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -16,6 +15,11 @@ import android.widget.TextView;
 import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.entity.ResponseHomeBBS;
 import com.bwf.aiyiqi.gui.activity.ActivityFitment;
+import com.bwf.aiyiqi.gui.activity.BudgetActivity;
+import com.bwf.aiyiqi.gui.activity.web.DesignDischargeRoomActivity;
+import com.bwf.aiyiqi.gui.activity.web.EffectPictureActivity;
+import com.bwf.aiyiqi.gui.activity.web.HomeFurnitureActivity;
+import com.bwf.aiyiqi.gui.activity.web.TheSameActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
@@ -78,7 +82,48 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                     contenx.startActivity(new Intent(contenx, ActivityFitment.class));
                 }
             });
+            //跳转同城活动
+            LinearLayout ll_activity1 = (LinearLayout) headerView.findViewById(R.id.layout_main_header_activity);
+            ll_activity1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    contenx.startActivity(new Intent(contenx, TheSameActivity.class));
+                }
+            });
+            //跳转到设计量房
+            LinearLayout ll_activity2 = (LinearLayout) headerView.findViewById(R.id.layout_main_header_design);
+            ll_activity2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    contenx.startActivity(new Intent(contenx, DesignDischargeRoomActivity.class));
+                }
+            });
+            //跳转到效果图界面
+            LinearLayout ll_activity3 = (LinearLayout) headerView.findViewById(R.id.layout_main_header_picture);
+            ll_activity3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    contenx.startActivity(new Intent(contenx, EffectPictureActivity.class));
+                }
+            });
+            //跳转到建材家居
+            LinearLayout ll_activity4 = (LinearLayout) headerView.findViewById(R.id.layout_main_header_category);
+            ll_activity4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    contenx.startActivity(new Intent(contenx, HomeFurnitureActivity.class));
+                }
+            });
+            //跳转到装修预算
+            LinearLayout ll_activity5 = (LinearLayout) headerView.findViewById(R.id.layout_main_header_money);
+            ll_activity5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    contenx.startActivity(new Intent(contenx, BudgetActivity.class));
+                }
+            });
             //todo 跳转到其他到页面
+
             return new HeaderViewHolder(headerView);
         }
         if (viewType == TYPE_FOOTER) {
@@ -140,23 +185,6 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     }
 
     public class HeaderViewHolder extends RecyclerView.ViewHolder {
-//        @BindView(R.id.layout_main_header_company)
-//        LinearLayout layoutMainHeaderCompany;
-//        @BindView(R.id.layout_main_header_activity)
-//        LinearLayout layoutMainHeaderActivity;
-//        @BindView(R.id.layout_main_header_school)
-//        LinearLayout layoutMainHeaderSchool;
-//        @BindView(R.id.layout_main_header_money)
-//        LinearLayout layoutMainHeaderMoney;
-//        @BindView(R.id.layout_main_header_category)
-//        LinearLayout layoutMainHeaderCategory;
-//        @BindView(R.id.layout_main_header_picture)
-//        LinearLayout layoutMainHeaderPicture;
-//        @BindView(R.id.layout_main_header_order)
-//        LinearLayout layoutMainHeaderOrder;
-//        @BindView(R.id.layout_main_header_design)
-//        LinearLayout layoutMainHeaderDesign;
-
         public HeaderViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
